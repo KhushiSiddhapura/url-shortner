@@ -25,7 +25,7 @@ const ShortUrlList = ({links, getLinks}) => {
   return (
     <div className="h-full overflow-y-auto pr-2">
       <div className="space-y-3">
-        {links.map (item => (
+        {[...links].reverse ().map (item => (
           <div
             key={item._id || item.id}
             className="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-5 transition hover:border-indigo-200 hover:shadow-sm sm:flex-row sm:items-center"
